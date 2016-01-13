@@ -20,7 +20,8 @@ function CreateFrames()
 		WHUD_ALERT:SetFrameStrata(WHUD_VARS.Alerts.strata)
 		WHUD_ALERT:SetAlpha(WHUD_VARS.Alerts.transparency)
 		WHUD_ALERT:SetScale(WHUD_VARS.Alerts.scale)
-		WHUD_ALERT:SetPoint("CENTER", "UIParent",WHUD_VARS.Alerts.X,WHUD_VARS.Alerts.Y)
+    local ef_scale = WHUD_ALERT:GetEffectiveScale()
+		WHUD_ALERT:SetPoint("TOPLEFT", "UIParent",WHUD_VARS.Alerts.X/ef_scale,WHUD_VARS.Alerts.Y/ef_scale)
 		WHUD_ALERT:Show()
 	-- text
     for i=1,3 do
@@ -264,7 +265,8 @@ function WHUD_Alerts_VarUpdate()
 		WHUD_ALERT:SetFrameStrata(WHUD_VARS.Alerts.strata)
 		WHUD_ALERT:SetScale(WHUD_VARS.Alerts.scale)
 		WHUD_ALERT:SetAlpha(WHUD_VARS.Alerts.transparency)
-		WHUD_ALERT:SetPoint("CENTER", "UIParent",WHUD_VARS.Alerts.X,WHUD_VARS.Alerts.Y)
+    local ef_scale = WHUD_ALERT:GetEffectiveScale()
+		WHUD_ALERT:SetPoint("TOPLEFT", "UIParent",WHUD_VARS.Alerts.X/ef_scale,WHUD_VARS.Alerts.Y/ef_scale)
         for i=1,3 do
             if i == 1 then
                 WHUD_ALERT_TEXT[i]:SetFont("Interface\\AddOns\\WarriorHUD\\fonts\\"..WHUD_VARS.Alerts.font..".ttf", WHUD_VARS.Alerts.fontsize+2,"THINOUTLINE")

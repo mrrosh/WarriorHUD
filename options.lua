@@ -16,7 +16,8 @@ function CreateFrames()
 	CreateFrame("Frame","WHUD_DRAG",UIParent)
 	WHUD_DRAG:SetWidth(400)
 	WHUD_DRAG:SetHeight(20)
-	WHUD_DRAG:SetPoint("CENTER",UIParent,WHUD_VARS.Options.X,WHUD_VARS.Options.Y)
+	local ef_scale = WHUD_DRAG:GetEffectiveScale()
+	WHUD_DRAG:SetPoint("TOPLEFT", "UIParent",WHUD_VARS.Options.X/ef_scale,WHUD_VARS.Options.Y/ef_scale)
 	WHUD_DRAG:RegisterForDrag("LeftButton")
 	WHUD_DRAG:EnableMouse(true)
 	WHUD_DRAG:SetMovable(true)
@@ -551,12 +552,13 @@ end
 
 function SavePosition(name)
 	local _, _, _, x, y = _G[frames[name]]:GetPoint(1) 
-	-- WHUD Frames only have 1Point, but the GetPoint() function will always return the position in relation to UIParent TOPLEFT, but WHUD Frames are anchored to UIParent CENTER so calculate the real vars
-	WHUD_VARS[name].X =  x - (GetScreenWidth()/2) + _G[frames[name]]:GetWidth()/2
-	WHUD_VARS[name].Y = -(-(y) - GetScreenHeight()/2 + _G[frames[name]]:GetHeight()/2)
+	local ef_scale = _G[frames[name]]:GetEffectiveScale()
+	
+	WHUD_VARS[name].X =  x * ef_scale
+	WHUD_VARS[name].Y =  y * ef_scale
     -- update editbox
-    if _G[name.."X"] ~= nil then _G[name.."X"]:SetText(WHUD_VARS[name]["X"]) end
-    if _G[name.."Y"] ~= nil then _G[name.."Y"]:SetText(WHUD_VARS[name]["Y"]) end
+  if _G[name.."X"] ~= nil then _G[name.."X"]:SetText(WHUD_VARS[name]["X"]) end
+  if _G[name.."Y"] ~= nil then _G[name.."Y"]:SetText(WHUD_VARS[name]["Y"]) end
 end
     
 end

@@ -11,8 +11,8 @@ end
 				VERSION = version,
 				Ragebar = {
 					enabled = true,
-					X = 0,
-					Y = -100,
+					X = 600,
+					Y = -400,
 					scale = 1,
 					strata = "HIGH",
 					transparency = 1,
@@ -22,8 +22,8 @@ end
 				},
 				Cooldowns = {
 					enabled = true,
-					X = 0,
-					Y = -50,
+					X = 650,
+					Y = -350,
 					scale = 1,
 					strata = "HIGH",
 					transparency = 1,
@@ -35,8 +35,8 @@ end
 				},
 				Overpower = {
 					enabled = true,
-					X = 0,
-					Y = 50,
+					X = 585,
+					Y = -300,
 					scale = 1,
 					strata = "HIGH",
 					transparency = 1,
@@ -48,8 +48,8 @@ end
 				},
 				Alerts = {
 					enabled = true,
-					X = 0,
-					Y = 120,
+					X = 540,
+					Y = -200,
 					scale = 1,
 					strata = "HIGH",
 					transparency = 1,
@@ -67,8 +67,8 @@ end
                     ["Battleshout"] = true,
 				},
 				Options = {
-					X = 0,
-					Y = 400,
+					X = 100,
+					Y = -200,
 				},
 			}
 	WHUD_IMPORTANTSPELLS = { 

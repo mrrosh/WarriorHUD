@@ -67,13 +67,13 @@ SlashCmdList["OLDWHUD"] = function(msg)
 			msg = string.sub(msg,3)
 			WHUD_VARS.Overpower.X = tonumber(msg);
 			WHUD_EDITMODE(10)
-			WHUD_OP:SetPoint("CENTER", "UIParent", WHUD_VARS.Overpower.X ,WHUD_VARS.Overpower.Y)
+			WHUD_OP:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Overpower.X ,WHUD_VARS.Overpower.Y)
 			Chat(" >> |cff8f4108WarriorHUD|r changed the X Position of the Overpower alert to |cff1fff1f"..WHUD_VARS.Overpower.X.."|r")
 		elseif string.find(msg,"Y") or string.find(msg,"y") then
 			msg = string.sub(msg,3)
 			WHUD_VARS.Overpower.Y = tonumber(msg);
 			WHUD_EDITMODE(10)
-			WHUD_OP:SetPoint("CENTER", "UIParent", WHUD_VARS.Overpower.X ,WHUD_VARS.Overpower.Y)
+			WHUD_OP:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Overpower.X ,WHUD_VARS.Overpower.Y)
 			Chat(" >> |cff8f4108WarriorHUD|r changed the Y Position of the Overpower alert to |cff1fff1f"..WHUD_VARS.Overpower.Y.."|r")
 		elseif string.find(msg,"scale") or string.find(msg,"Scale") or string.find(msg,"SCALE") then
 			msg = string.sub(msg,7)
@@ -149,13 +149,13 @@ SlashCmdList["OLDWHUD"] = function(msg)
 			msg = string.sub(msg,3)
 			WHUD_VARS.Alerts.X = tonumber(msg);
 			WHUD_EDITMODE(10)
-			WHUD_ALERT:SetPoint("CENTER", "UIParent", WHUD_VARS.Alerts.X ,WHUD_VARS.Alerts.Y)
+			WHUD_ALERT:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Alerts.X ,WHUD_VARS.Alerts.Y)
 			Chat(" >> |cff8f4108WarriorHUD|r changed the X Position of the Alerts to |cff1fff1f"..WHUD_VARS.Alerts.X.."|r")
 		elseif string.find(msg,"Y") or string.find(msg,"y") then
 			msg = string.sub(msg,3)
 			WHUD_VARS.Alerts.Y = tonumber(msg);
 			WHUD_EDITMODE(10)
-			WHUD_ALERT:SetPoint("CENTER", "UIParent", WHUD_VARS.Alerts.X ,WHUD_VARS.Alerts.Y)
+			WHUD_ALERT:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Alerts.X ,WHUD_VARS.Alerts.Y)
 			Chat(" >> |cff8f4108WarriorHUD|r changed the Y Position of the Alerts to |cff1fff1f"..WHUD_VARS.Alerts.Y.."|r")
 		elseif string.find(msg,"scale") or string.find(msg,"Scale") or string.find(msg,"SCALE") then
 			msg = string.sub(msg,7)
@@ -320,13 +320,13 @@ SlashCmdList["OLDWHUD"] = function(msg)
 			msg = string.sub(msg,3)
 			WHUD_VARS.Ragebar.X = tonumber(msg);
 			WHUD_EDITMODE(10)
-			WHUD_RBAR:SetPoint("CENTER", "UIParent", WHUD_VARS.Ragebar.X ,WHUD_VARS.Ragebar.Y)
+			WHUD_RBAR:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Ragebar.X ,WHUD_VARS.Ragebar.Y)
 			Chat(" >> |cff8f4108WarriorHUD|r changed the X Position of the Ragebar to |cff1fff1f"..WHUD_VARS.Ragebar.X.."|r")
 		elseif string.find(msg,"Y") or string.find(msg,"y") then
 			msg = string.sub(msg,3)
 			WHUD_VARS.Ragebar.Y = tonumber(msg);
 			WHUD_EDITMODE(10)
-			WHUD_RBAR:SetPoint("CENTER", "UIParent", WHUD_VARS.Ragebar.X ,WHUD_VARS.Ragebar.Y)
+			WHUD_RBAR:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Ragebar.X ,WHUD_VARS.Ragebar.Y)
 			Chat(" >> |cff8f4108WarriorHUD|r changed the Y Position of the Ragebar to |cff1fff1f"..WHUD_VARS.Ragebar.Y.."|r")
 		elseif string.find(msg,"scale") or string.find(msg,"Scale") or string.find(msg,"SCALE") then
 			msg = string.sub(msg,7)
@@ -484,13 +484,13 @@ SlashCmdList["OLDWHUD"] = function(msg)
 			msg = string.sub(msg,3)
 			WHUD_VARS.Cooldowns.X = tonumber(msg);
 			WHUD_EDITMODE(10)
-			WHUD_CDBAR:SetPoint("CENTER", "UIParent", WHUD_VARS.Cooldowns.X ,WHUD_VARS.Cooldowns.Y)
+			WHUD_CDBAR:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Cooldowns.X ,WHUD_VARS.Cooldowns.Y)
 			Chat(" >> |cff8f4108WarriorHUD|r changed the X Position of the Cooldown alert to |cff1fff1f"..WHUD_VARS.Cooldowns.X.."|r")
 		elseif string.find(msg,"Y") or string.find(msg,"y") then
 			msg = string.sub(msg,3)
 			WHUD_VARS.Cooldowns.Y = tonumber(msg);
 			WHUD_EDITMODE(10)
-			WHUD_CDBAR:SetPoint("CENTER", "UIParent", WHUD_VARS.Cooldowns.X ,WHUD_VARS.Cooldowns.Y)
+			WHUD_CDBAR:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Cooldowns.X ,WHUD_VARS.Cooldowns.Y)
 			Chat(" >> |cff8f4108WarriorHUD|r changed the Y Position of the Cooldown alert to |cff1fff1f"..WHUD_VARS.Cooldowns.Y.."|r")
 		elseif string.find(msg,"scale") or string.find(msg,"Scale") or string.find(msg,"SCALE") then
 			msg = string.sub(msg,7)
@@ -654,17 +654,17 @@ SlashCmdList["OLDWHUD"] = function(msg)
 				}
 				-- now reload the frames with default values
 					-- Ragebar
-					WHUD_RBAR:SetPoint("CENTER", "UIParent", WHUD_VARS.Ragebar.X ,WHUD_VARS.Ragebar.Y)
+					WHUD_RBAR:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Ragebar.X ,WHUD_VARS.Ragebar.Y)
 					WHUD_RBAR:SetFrameStrata(WHUD_VARS.Ragebar.strata)
 					WHUD_RBAR:SetScale(WHUD_VARS.Ragebar.scale)
 					WHUD_RBAR:SetAlpha(WHUD_VARS.Ragebar.transparency)
 					-- CD bar
-					WHUD_CDBAR:SetPoint("CENTER", "UIParent", WHUD_VARS.Cooldowns.X ,WHUD_VARS.Cooldowns.Y)
+					WHUD_CDBAR:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Cooldowns.X ,WHUD_VARS.Cooldowns.Y)
 					WHUD_CDBAR:SetFrameStrata(WHUD_VARS.Cooldowns.strata)
 					WHUD_CDBAR:SetScale(WHUD_VARS.Cooldowns.scale)
 					WHUD_CDBAR:SetAlpha(WHUD_VARS.Cooldowns.transparency)
 					-- OP bar
-					WHUD_OP:SetPoint("CENTER", "UIParent",WHUD_VARS.Overpower.X,WHUD_VARS.Overpower.Y)
+					WHUD_OP:SetPoint("TOPLEFT", "UIParent",WHUD_VARS.Overpower.X,WHUD_VARS.Overpower.Y)
 					WHUD_OP:SetFrameStrata(WHUD_VARS.Overpower.strata)
 					WHUD_OP:SetScale(WHUD_VARS.Overpower.scale)
 					

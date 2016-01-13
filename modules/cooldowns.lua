@@ -18,7 +18,8 @@ function CreateFrames()
 		WHUD_CDBAR:SetFrameStrata(WHUD_VARS.Cooldowns.strata)
 		WHUD_CDBAR:SetScale(WHUD_VARS.Cooldowns.scale)
 		WHUD_CDBAR:SetAlpha(WHUD_VARS.Cooldowns.transparency)
-		WHUD_CDBAR:SetPoint("CENTER", "UIParent", WHUD_VARS.Cooldowns.X ,WHUD_VARS.Cooldowns.Y)
+		local ef_scale = WHUD_CDBAR:GetEffectiveScale()
+		WHUD_CDBAR:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Cooldowns.X/ef_scale ,WHUD_VARS.Cooldowns.Y/ef_scale)
 		WHUD_CDBAR:Show()
 	-- create the icons now
 	for i=1,6 do
@@ -258,7 +259,8 @@ function WHUD_Cooldowns_VarUpdate()
 		WHUD_CDBAR:SetFrameStrata(WHUD_VARS.Cooldowns.strata)
 		WHUD_CDBAR:SetScale(WHUD_VARS.Cooldowns.scale)
 		WHUD_CDBAR:SetAlpha(WHUD_VARS.Cooldowns.transparency)
-		WHUD_CDBAR:SetPoint("CENTER", "UIParent", WHUD_VARS.Cooldowns.X ,WHUD_VARS.Cooldowns.Y)
+		local ef_scale = WHUD_CDBAR:GetEffectiveScale()
+		WHUD_CDBAR:SetPoint("TOPLEFT", "UIParent", WHUD_VARS.Cooldowns.X/ef_scale ,WHUD_VARS.Cooldowns.Y/ef_scale)
 	else
 		WHUD_CDBAR:Hide()
 	end
