@@ -188,6 +188,10 @@ function Glow(button,show)
                 button.overlay:SetWidth(button:GetWidth()*1.2)
                 button.overlay:SetHeight(button:GetHeight()*1.2)
                 button.overlay:SetPoint("CENTER",button,0,1)
+            elseif AddonIsActive("pfUI") then
+                button.overlay:SetWidth(button:GetWidth()*1.4)
+                button.overlay:SetHeight(button:GetHeight()*1.4)
+                button.overlay:SetPoint("CENTER",button,0,1)
             else
                 button.overlay:SetWidth(button:GetWidth()*1.1)
                 button.overlay:SetHeight(button:GetHeight()*1.1)
