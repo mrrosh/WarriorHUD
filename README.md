@@ -1,10 +1,12 @@
 # WarriorHUD
 This World of Warcraft AddOn is a HUD(Head-up-Display) created exclusively for Warriors. It will display all important Cooldowns, your Rage and Alert you in certain Situations.
 
-<br \>
-<a href="https://github.com/MOUZU/WarriorHUD/releases">Download latest Release</a>
+![img](https://user-images.githubusercontent.com/26133646/39253411-1553a9fe-48a8-11e8-8b6d-9248a6fa18f7.png)
 
 # Changelog
+
+2.2.1 (24 May 2023)
+- attempt to add glow effect to pfUI actionbars
 
 2.2 (11. January 2015)
 - fixed the glowing of overpower if not in correct stance
