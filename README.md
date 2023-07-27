@@ -5,6 +5,9 @@ This World of Warcraft AddOn is a HUD(Head-up-Display) created exclusively for W
 
 # Changelog
 
+2.2.2 (28 July 2023)
+- merged fixes & added new fonts
+
 2.2.1 (24 May 2023)
 - attempt to add glow effect to pfUI actionbars
 
