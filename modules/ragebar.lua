@@ -33,7 +33,7 @@ function CreateFrames()
 		WHUD_RAGE_TEXT = WHUD_RBAR:CreateFontString(nil, "OVERLAY")
 		WHUD_RAGE_TEXT:SetParent(WHUD_RBAR)
 		WHUD_RAGE_TEXT:SetFont("Interface\\AddOns\\WarriorHUD\\fonts\\"..WHUD_VARS.Ragebar.font..".ttf", WHUD_VARS.Ragebar.fontsize,"THINOUTLINE")
-		WHUD_RAGE_TEXT:SetPoint("CENTER",WHUD_RAGE,0,-10)
+		WHUD_RAGE_TEXT:SetPoint("CENTER",WHUD_RAGE, 0, 0)
 		WHUD_RAGE_TEXT:SetText("")
 		WHUD_RAGE_TEXT:SetJustifyH("CENTER")
 		

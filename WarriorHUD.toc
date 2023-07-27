@@ -1,6 +1,6 @@
 ## Interface: 11200
 ## Title: |cff8f4108Warrior|r HUD
-## Version: 2.2.1
+## Version: 2.2.2
 ## Notes: a HUD especially for Warriors. Displays the amount of rage,warrior cooldowns and alerts overpower usability.
 ## Author: MOUZU(LYQ/Virose) @ GitHub
 

@@ -2,6 +2,7 @@ if UnitClass("player") == "Warrior" then
 
 local _G = getfenv(0)
 local editmode = false
+local editorFont = "Interface\\AddOns\\WarriorHUD\\fonts\\Myriad-Pro.ttf"
 local toggle, OpenMenu, Set_Backdrop, CreateFrames, currentTab, subtitle, CreateTab, CreateLines, SetVariable, GetVariable, SavePosition, CreateSlider, CreateEditBox
 local content = {}
 local frames = {["Ragebar"] = "WHUD_RBAR",["Overpower"] = "WHUD_OP",["Cooldowns"] = "WHUD_CDBAR",["Alerts"] = "WHUD_ALERT",["Options"] = "WHUD_DRAG",}
@@ -36,19 +37,19 @@ function CreateFrames()
 	WHUD_FRAME:SetBackdropBorderColor(1,1,1,0.8)
 	local title = WHUD_FRAME:CreateFontString(nil, "OVERLAY")
 		title:SetParent(WHUD_FRAME)
-		title:SetFont("Interface\\AddOns\\WarriorHUD\\fonts\\Fishfingers.ttf", 30,"OUTLINE")
+		title:SetFont(editorFont, 30,"OUTLINE")
 		title:SetPoint("TOP",WHUD_FRAME,0,15)
 		title:SetText("Warrior HUD Options")
 		title:SetJustifyH("CENTER")
 		subtitle = WHUD_FRAME:CreateFontString(nil, "OVERLAY")
 		subtitle:SetParent(WHUD_FRAME)
-		subtitle:SetFont("Interface\\AddOns\\WarriorHUD\\fonts\\Fishfingers.ttf", 20, "OUTLINE")
+		subtitle:SetFont(editorFont, 20, "OUTLINE")
 		subtitle:SetPoint("TOP",WHUD_FRAME,0,-45)
 		subtitle:SetText("General")
 		subtitle:SetJustifyH("CENTER")
 	local version = WHUD_FRAME:CreateFontString(nil, "OVERLAY")
 		version:SetParent(WHUD_FRAME)
-		version:SetFont("Interface\\AddOns\\WarriorHUD\\fonts\\Fishfingers.ttf", 14,"OUTLINE")
+		version:SetFont(editorFont, 14,"OUTLINE")
 		version:SetPoint("TOPLEFT",WHUD_FRAME,3,-3)
 		version:SetText("v "..WHUD_VARS.VERSION)
 		version:SetJustifyH("LEFT")
@@ -90,7 +91,7 @@ function CreateFrames()
 		content["Disabled"]:SetBackdropBorderColor(1,0,0,0.2)
 		local disabled = content["Disabled"]:CreateFontString(nil, "OVERLAY")
 		disabled:SetParent(content["Disabled"])
-		disabled:SetFont("Interface\\AddOns\\WarriorHUD\\fonts\\Fishfingers.ttf", 40, "OUTLINE")
+		disabled:SetFont(editorFont, 40, "OUTLINE")
 		disabled:SetPoint("CENTER",content["Disabled"])
 		disabled:SetText("DISABLED")
 		disabled:SetJustifyH("CENTER")
@@ -553,12 +554,12 @@ end
 function SavePosition(name)
 	local _, _, _, x, y = _G[frames[name]]:GetPoint(1) 
 	local ef_scale = _G[frames[name]]:GetEffectiveScale()
-	
+
 	WHUD_VARS[name].X =  x * ef_scale
 	WHUD_VARS[name].Y =  y * ef_scale
     -- update editbox
-  if _G[name.."X"] ~= nil then _G[name.."X"]:SetText(WHUD_VARS[name]["X"]) end
-  if _G[name.."Y"] ~= nil then _G[name.."Y"]:SetText(WHUD_VARS[name]["Y"]) end
+   if _G[name.."X"] ~= nil then _G[name.."X"]:SetText(WHUD_VARS[name]["X"]) end
+   if _G[name.."Y"] ~= nil then _G[name.."Y"]:SetText(WHUD_VARS[name]["Y"]) end
 end
     
 end
