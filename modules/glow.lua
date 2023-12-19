@@ -78,20 +78,36 @@ function Glow_Spell(name,show)
                         end
                         frameName = "BActionButton"..number;
                     elseif AddonIsActive("pfUI") then -- attempt to add pfUI actionbars
-                        if i > 72 and i < 85 then
+                        local bar = ""
+                        if i > 60 and i < 73 then
+                            bar = "pfActionBarTopButton"
+                            number = i - 60
+                        elseif i > 48 and i < 61 then
+                            bar = "pfActionBarLeftButton"
+                            number = i - 48
+                        elseif i > 24 and i < 37 then
+                            bar = "pfActionBarRightButton"
+                            number = i - 24
+                        elseif i > 36 and i < 49 then
+                            bar = "pfActionBarVerticalButton"
+                            number = i - 36
+                        elseif i > 72 and i < 85 then
+                            bar = "pfActionBarMainButton"
                             number = i - 72
                             local _,_, active = GetShapeshiftFormInfo(1)
                             if not active then display = false end
                         elseif i > 84 and i < 97 then
+                            bar = "pfActionBarMainButton"
                             number = i - 84
                             local _,_, active = GetShapeshiftFormInfo(2)
                             if not active then display = false end
                         elseif i > 96 and i < 108 then
+                            bar = "pfActionBarMainButton"
                             number = i - 96
                             local _,_, active = GetShapeshiftFormInfo(3)
                             if not active then display = false end
                         end
-                        frameName = "pfActionBarMainButton"..number;
+                        if bar ~= "" then frameName = bar..number; end
                     else -- Blizzards default ActionBars/Bartender2/zBar/ViroUI actionbars
                         local bar = ""
                         if i > 24 and i < 37 then
